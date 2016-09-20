@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>M3 - Exercise 1</title>
+<style>
+label {
+  display: inline-block;
+  width: 140px;
+  text-align: right;
+}​
+
+</style>
+<script type="text/javascript">
+function calcPower(){
+	var base,exponent;
+	base = document.formPower.base.value;
+	exponent = document.formPower.exponent.value;
+	document.formPower.result.value = power(base,exponent);
+	function power(base,exponent){
+		if(exponent == 1)
+			return base; 
+		else
+			return base*power(base,exponent - 1);
+	}
+}
+</script>
+</head>
+<body>
+<h1>Exercise 1 - Recursive Function - Base Raised to Power of Exponent</h1>
+<br>
+<form name="formPower">
+	<label for="base">Enter base number: </label>
+	<input type="text" name="base" id="base" size="10"><br>
+	<label for="exponent">Enter exponent number: </label>
+	<input type="text" id="exponent" name="exponent" size="10"><br>
+	<input type="button" value="Submit" onclick="calcPower()" style="margin-left: 145px; margin-top:10px;"><br>
+	<br>
+	<label for="result">Result:</label>
+	<input type="text" id="result" name="result">
+</form>
+</body>
+</html>
