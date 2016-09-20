@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Gina Ravuth - M2 - Exercise 3</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<h1>Autocomplete and Datalist - Exercise 3</h1>
+
+	<form method="post" autocomplete="on">
+		<p><label for="fName">First Name: 
+			<input type="text" id="fName" placeholder="First Name" />
+		</label></p>
+		<p><label for="lName">Last Name: 
+			<input type="text" id="lName" placeholder="Last Name" />
+		</label></p>
+		<p><label for="email">Email: 
+			<input type="text" id="email" placeholder="Email" />
+		</label></p>
+		<p><label for="list">Birth Month: 
+			<input type="text" id="list" placeholder="Birth Month" />	
+		<datalist id="months">
+			<option value="January">
+			<option value="February">
+			<option value="March">
+			<option value="April">
+			<option value="May">
+			<option value="June">
+			<option value="July">
+			<option value="August">
+			<option value="September">
+			<option value="October">
+			<option value="November">
+			<option value="December">
+		</datalist>
+		</label></p>
+		<p class="buttons"><input type="submit" value="Submit" />
+			<input type="reset" value="Clear" /></p>
+	</form>
+</body>
+</html>

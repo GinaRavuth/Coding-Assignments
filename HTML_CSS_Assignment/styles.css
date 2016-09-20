@@ -1,0 +1,75 @@
+body{
+	font-family: Century Gothic;
+	background: #f2f2f2;
+}
+ul{
+	margin:auto;
+	display:table;
+	text-align:center;
+	padding: 0px 50px 50px 50px;
+}
+ul li{
+	list-style-type:none;
+}
+li a{
+	text-decoration:none;
+	color: #000;
+	text-align:center;
+	font-weight:500;
+}
+li a:hover{
+	transition:.5s;
+	letter-spacing: .5px;
+	color: #ff0000;
+}
+h1{
+	font-family: 'Century Gothic';
+	text-align:center;
+}
+.box{
+	
+	width:500px;
+	margin:auto;
+}
+form{
+	margin:auto;
+	display:table;
+	background: #f9f9f9;
+	padding:20px 40px 20px 40px;
+}
+input{
+	display:block;
+}
+input[type="reset"], input[type="submit"]{
+	background: #fff;
+	border: none;
+	padding:10px;
+	display:inline-block !important;
+	margin:5px;s
+	font-family: 'Century Gothic';
+	border: 2px solid #f2f2f2;
+}
+input[type="reset"]:hover, input[type="submit"]:hover{
+	border:2px solid #ff0000;
+	transition:.5s;
+	cursor:pointer;
+}
+.buttons{
+	margin:auto;
+	display: table;
+}
+table{
+	margin:auto;
+	display:table;
+}
+table, td, th { border: 2px solid gray }
+@media only screen and (max-width: 480px) {
+ul{
+	margin:auto;
+	display:block;
+}
+h1{
+	font-family: 'Century Gothic';
+	text-align:center;
+}
+}
