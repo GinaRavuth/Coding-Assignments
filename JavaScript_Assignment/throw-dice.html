@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exercise 2: ThrowDice</title>
+	<script type ="text/javascript">
+	var dice1;
+	var dice2;
+	var result;
+	var num;
+	var Number;
+	var i;
+
+	function rollDice(){
+		var randomDice1 = Math.floor(Math.random()*6);
+		return randomDice1 + 1;
+	}
+
+	function roll(){
+		var combination = new Array();
+		result = "";
+		var display;
+		display = "";
+		num = window.prompt("Enter how many times you want to throw the dice");
+		
+	for(i = 0;i < 12; i++){
+		combination[i]=0;
+	}
+	for(i = 0;i < parseInt(num);i++){
+		dice1 = rollDice();
+		dice2 = rollDice();
+		result = parseInt(dice1)+ parseInt(dice2);
+		combination[result-2]+=1;
+		Number = i+1;
+		display += "Roll #"+ Number + ": " + dice1 + " " + dice2 + "<br>";
+	}
+	div1.innerHTML = display;
+	var result1 = "";
+
+	for(i = 0;i < 11;i++){
+		Number = i+2;
+		result1 += "Sum of "+ Number +" occurred :" + combination[i] +" times<br>"
+	}
+	div2.innerHTML = result1;
+
+	}
+
+	</script>
+</head>
+<body onload="roll()">
+	<h1>Exercise 2: Throw Dice</h1>
+	<br>
+
+	<p>Refresh to throw dice again. </p>
+	<form name ="ThrowDiceForm" action = "">
+		<table>
+			<tr><div id="div1"></div></tr>
+			<tr><div id="div2"></div></tr>
+		</table>
+	</form>
+</body>
+</html>
