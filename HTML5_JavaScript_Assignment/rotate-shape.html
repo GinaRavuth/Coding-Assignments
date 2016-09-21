@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>HTML5 Canvas Task - Gina Ravuth</title>
+    <!--
+		Create something on HTML5 Canvas..
+    -->
+<style>
+canvas {border: 1px solid #000;}
+</style>
+</head>
+<body>
+<h3>Rotating Shape with HTML5 Canvas - Gina Ravuth</h3>
+<canvas id="rotateRect" width="500" height="500"></canvas>
+<script type="text/javascript">
+	var canvas = document.getElementById("rotateRect");
+	var context = canvas.getContext("2d")
+	
+	function startRotating(){
+		context.translate(canvas.width/2, canvas.height/2);
+		setInterval(rotate, 10);
+	}
+	function rotate(){
+		context.clearRect(-100, -100, 200, 200);
+		context.rotate(Math.PI/360);
+		context.fillStyle = "blue";
+		context.fillRect(-50,-50,100,100);
+	}
+	
+	window.addEventListener("load",startRotating, false);
+</script>
+</body>
+</html>
